@@ -132,10 +132,21 @@ body {
 
 
 .abansFooter {
+    margin-bottom: 50px;
     border: solid #CCCCCC 2px;
     text-align: center;
     i {
         color: @taronja;
+        font-size: 2em;
+    }
+    .row {
+        margin-top: 10px;
+        
+        & > div {
+            h3 {
+                margin-top: 5px;
+            }
+        }
     }
 }
 
@@ -155,11 +166,13 @@ footer {
         }
     }
     .social {
+        text-align: center;
         .fa-twitter {
             color: #65b2ff;
         }
         i {
-            margin-right: 10px;
+            margin-top: 10px;
+            display: block;
         }
     }
     
@@ -168,4 +181,17 @@ footer {
 #finalDeTot {
     background-color: @taronja;
     color: white;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    footer {
+        .social {
+            text-align: left;
+            i {
+                display: inline-block;
+                margin-right: 10px;
+            }
+        }
+    }
 }
