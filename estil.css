@@ -124,6 +124,9 @@ body {
 .logotip {
   font-family: 'Rock Salt', cursive;
 }
+.newsletter .text-blanc {
+  color: white;
+}
 .abansFooter {
   margin-bottom: 50px;
   border: solid #CCCCCC 2px;
@@ -143,6 +146,10 @@ body {
   background-color: #fe5722;
   color: white;
 }
+.boto-blanc {
+  background-color: white;
+  border: 1px solid black;
+}
 .carrousel-petit {
   background-color: #f1f1f1;
 }
@@ -152,6 +159,20 @@ body {
 .carrousel-petit .carousel-indicators .active {
   background-color: #fe5722;
   border-color: #fe5722;
+}
+.carrousel-petit img {
+  max-height: 200px;
+}
+.carrousel-petit .item {
+  margin: 90px 0 90px 0;
+}
+.carrousel-petit h2 {
+  color: #fe5722;
+  font-weight: 900;
+  font-size: 3em;
+}
+.carrousel-petit button {
+  margin-top: -10px;
 }
 footer {
   background-color: #F5F5F5;

@@ -21,6 +21,9 @@
       
       <link href="https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+      <script src="js/parallax.js"></script>
   </head>
   <body>
       <header>
@@ -101,6 +104,8 @@
       <main>
           
           <div class="carrousel-petit">
+              
+              <!-- TODO no fer servir cols de bootstrap -->
             
           <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
@@ -113,22 +118,6 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <!--<img src="img_chania.jpg" alt="Chania"-->
-        <div class="container">
-        <div class="row">
-              <div class="col-xs-7">
-        <h3>2016 TREND</h3>
-                  <h2>NEW COLLECTION</h2>
-        <p>Hodor. Hodor hodor hodor? Hodor hodor - hodor, hodor. Hodor hodor... Hodor hodor hodor hodor! Hodor hodor - hodor - hodor</p>
-              </div>
-            <div class="col-xs-5">
-                <img src="imatges/botes.png"/>
-            </div>
-          </div>
-      </div>
-    </div>
-
-    <div class="item">
       <div class="container">
         <div class="row">
               <div class="col-xs-7">
@@ -137,7 +126,10 @@
         <p>Hodor. Hodor hodor hodor? Hodor hodor - hodor, hodor. Hodor hodor... Hodor hodor hodor hodor! Hodor hodor - hodor - hodor</p>
               </div>
             <div class="col-xs-5">
-                <img src="imatges/botes.png"/>
+                <img class="img-responsive" src="imatges/botes.png"/>
+            </div>
+            <div class="col-xs-7">
+                <button class="btn boto-blanc">SHOP NOW</button>
             </div>
           </div>
       </div>
@@ -154,7 +146,25 @@
             <div class="col-xs-5">
                 <img class="img-responsive" src="imatges/botes.png"/>
             </div>
-            <div class="col-md-7">
+            <div class="col-xs-7">
+                <button class="btn boto-blanc">SHOP NOW</button>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="container">
+        <div class="row">
+              <div class="col-xs-7">
+        <h3>2016 TREND</h3>
+                  <h2>NEW COLLECTION</h2>
+        <p>Hodor. Hodor hodor hodor? Hodor hodor - hodor, hodor. Hodor hodor... Hodor hodor hodor hodor! Hodor hodor - hodor - hodor</p>
+              </div>
+            <div class="col-xs-5">
+                <img class="img-responsive" src="imatges/botes.png"/>
+            </div>
+            <div class="col-xs-7">
                 <button class="btn boto-blanc">SHOP NOW</button>
             </div>
           </div>
@@ -179,9 +189,14 @@
           
           <!-- ############# -->
           
-          
-          <div class="container newsletter">
+          <div class="newsletter parallax-window" data-parallax="scroll" data-image-src="imatges/parallax1.jpg">
+          <div class="container">
               <div class="row">
+                  
+                  <div class="col-xs-12 text-blanc text-center">
+                    <h2>SUBSCRIBE TO OUR NEWSLETTER</h2>
+                      <p>Permanence of the stars Drake Equation emerged into consciousness.</p>
+                  </div>
           
               <form>
                   <div class="form-group col-md-6 col-md-offset-2">
@@ -192,8 +207,13 @@
                       </div>
             </form>
           </div>
-          </div> 
+          </div>
+          </div>
               
+          
+          <!-- ############# -->
+          
+          
           
           <div class="container abansFooter">
             <div class="row">
