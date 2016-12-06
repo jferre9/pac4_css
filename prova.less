@@ -1,0 +1,49 @@
+@taronja: #FE5722;
+.boto-slider {
+    padding: 5px;
+    color: black;
+    text-decoration: none !important;
+    margin-bottom: 10px;
+    
+    + a {
+        color: @taronja;
+    }
+    
+}
+
+.col-item {
+    position: relative;
+    
+    .preu {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        vertical-align: middle;
+        font-size: 1.2em;
+        font-weight: bolder;
+        .dolar {
+            position: relative;
+            top: -3px;
+            font-size: 0.7em;
+        }
+        strike {
+            font-size: 0.8em;
+            font-weight: normal;
+        }
+    }
+    .hover-item {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        display: none;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    
+    &:hover {
+        .hover-item {
+            display: block;
+        }
+    }
+}

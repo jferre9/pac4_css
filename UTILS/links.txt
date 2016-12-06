@@ -1,2 +1,3 @@
 http://bootstrapmaster.com/live/simpliq2/ui-sliders-progress.html
 http://bootsnipp.com/snippets/featured/large-dropdown-menu
+http://bootsnipp.com/snippets/featured/carousel-product-cart-slider
