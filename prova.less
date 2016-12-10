@@ -1,4 +1,5 @@
 @taronja: #FE5722;
+@gris: #F1F1F1;
 .boto-slider {
     padding: 5px;
     color: black;
@@ -13,6 +14,10 @@
 
 .col-item {
     position: relative;
+    
+    .photo {
+        position: relative;
+    }
     
     .preu {
         position: absolute;
@@ -95,5 +100,143 @@
         .hover-item {
             display: block;
         }
+        
+        .photo {
+            -webkit-box-shadow: 0px 6px 25px -1px rgba(115,115,115,1);
+            -moz-box-shadow: 0px 6px 25px -1px rgba(115,115,115,1);
+            box-shadow: 0px 6px 25px -1px rgba(115,115,115,1);
+        }
+    }
+    
+    .peu-slider {
+        padding-top: 10px;
+        text-align: center;
+        .estrelles {
+            text-align: center;
+            display: inline-block;
+            color: @taronja;
+        }
+    }
+    
+}
+
+.estrella-gris {
+    color: #a5a5a5;
+}
+
+.carousel-mobil {
+    text-align: center;
+    .col-item {
+        display: inline-block;
     }
 }
+
+
+
+.boto-blanc {
+    background-color: white;
+    border: 1px solid black;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+//*********************************************
+
+.carrousel-petit {
+    background-color: @gris;
+    position: relative;
+    
+    .carousel-indicators {
+        li {
+            border-color: black;
+        }
+        .active {
+            background-color: @taronja;
+            border-color: @taronja;
+        }
+    }
+    
+    .item {
+        margin: 90px 0 90px 0;
+    }
+    h2 {
+        color: @taronja;
+        font-weight: 900;
+        font-size: 2em;
+    }
+    
+    
+    .text-carousel {
+        position: relative;
+        float: left;
+        width: 80%;
+        z-index: 999;
+    }
+    
+    .imatge-carousel {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 42%;
+        text-align: center;
+        height: 200px;
+        img {
+            position: relative;
+            display: inline-block;
+            max-height: 200px;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            top: 50%;
+        }
+    }
+    
+    .boto-carousel {
+        position: absolute;
+        right: 0;
+        top: 200px;
+        text-align: center;
+        width: 42%;
+        button {
+            margin-top: -10px;
+        }
+        
+    }
+    
+    
+    
+}
+
+@media (min-width: 768px) {
+    .carrousel-petit {
+        .text-carousel {
+            width: 65%;
+        }
+        
+        .imatge-carousel {
+            width: 35%;
+        }
+        
+        .boto-carousel {
+            float: left;
+            clear: left;
+            position: relative;
+            top: 0;
+            width: auto;
+            button {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+

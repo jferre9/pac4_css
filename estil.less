@@ -120,6 +120,7 @@
 
 @taronja: #FE5722;
 @gris: #F1F1F1;
+@gris-marge: #cccccc;
 body {
     font-family: 'Open Sans', sans-serif;
 }
@@ -130,6 +131,33 @@ body {
 
 .text-blanc {
     color: white;
+}
+
+.boto-quadrat {
+    border: solid @gris-marge 1px;
+    background-color: white;
+}
+
+
+.titol {
+    .linia-curta {
+        display: inline-block;
+        height: 1px;
+        width: 10px;
+        border-top: dashed 2px black;
+    }
+    .linia-llarga {
+        display: inline-block;
+        height: 1px;
+        width: 100px;
+        border-top: solid 2px @taronja;
+    }
+    h2 {
+        margin-bottom: 0;
+    }
+    p {
+        margin-top: 10px;
+    }
 }
 
 .abansFooter {
@@ -151,9 +179,17 @@ body {
     }
 }
 
+.boto-quadrat {
+    border: solid @gris-marge 1px;
+    background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 .boto-taronja {
     background-color: @taronja;
     color: white;
+    border: 1px solid @taronja;
 }
 
 .boto-blanc {
@@ -163,6 +199,8 @@ body {
 
 .carrousel-petit {
     background-color: @gris;
+    position: relative;
+    
     .carousel-indicators {
         li {
             border-color: black;
@@ -172,19 +210,52 @@ body {
             border-color: @taronja;
         }
     }
-    img {
-        max-height: 200px;
-    }
+    
     .item {
         margin: 90px 0 90px 0;
     }
     h2 {
         color: @taronja;
         font-weight: 900;
-        font-size: 3em;
+        font-size: 2em;
     }
-    button {
-        margin-top: -10px;
+    
+    
+    .text-carousel {
+        position: relative;
+        float: left;
+        width: 80%;
+        z-index: 999;
+    }
+    
+    .imatge-carousel {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 42%;
+        text-align: center;
+        height: 200px;
+        img {
+            position: relative;
+            display: inline-block;
+            max-height: 200px;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            top: 50%;
+        }
+    }
+    
+    .boto-carousel {
+        position: absolute;
+        right: 0;
+        top: 200px;
+        text-align: center;
+        width: 42%;
+        button {
+            margin-top: -10px;
+        }
+        
     }
 }
 
@@ -253,6 +324,30 @@ footer {
                 display: inline-block;
                 margin-right: 10px;
             }
+        }
+    }
+    .carrousel-petit {
+        .text-carousel {
+            width: 65%;
+        }
+        
+        .imatge-carousel {
+            width: 35%;
+        }
+        
+        .boto-carousel {
+            float: left;
+            clear: left;
+            position: relative;
+            top: 0;
+            width: auto;
+            button {
+                margin-top: 0;
+            }
+        }
+        
+        h2 {
+            font-size: 2.5em;
         }
     }
 }
