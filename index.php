@@ -93,6 +93,9 @@
                 <button class="boto-quadrat">Hodies</button>
             </div>
         </div>
+        
+        <?php include "slider2.html" ?>
+        
         <div class="carrousel-petit">
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
@@ -152,17 +155,17 @@
             </div>
         </div>
         <!-- ###################################################### -->
-        <div class="container arrivals">
-            <div class="titol text-center">
-                <h2>NEW ARRIVALS</h2>
-                <div class="linia-llarga"></div>
-                <div class="linia-curta"></div>
-                <div class="linia-llarga"></div>
-                <p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime.</p>
-            </div>
-            
+        <!-- SLIDER STANDARD LOREM IPSUM -->
+        <?php include "slider3.html" ?>
+        <!-- ###################################################### -->
+        <div class="ceo">
+        
         </div>
         <!-- ###################################################### -->
+        <!-- SLIDER BLOG -->
+        <?php include "slider4.html" ?>
+        <!-- ###################################################### -->
+        
         <div class="newsletter parallax-window" androidFix="false" data-parallax="scroll" data-image-src="imatges/parallax1.jpg">
             <div class="container">
                 <div class="row">
@@ -199,7 +202,7 @@
                 </div>
             </div>
         </div>
-        <div class="container"> </div>
+        
     </main>
     <!-- ################################################################## -->
     <footer>

@@ -1,5 +1,6 @@
 @taronja: #FE5722;
 @gris: #F1F1F1;
+@gris-marge: #cccccc;
 .boto-slider {
     padding: 5px;
     color: black;
@@ -144,93 +145,111 @@ body {
 
 //*********************************************
 
-.carrousel-petit {
-    background-color: @gris;
-    position: relative;
-    
-    .carousel-indicators {
-        li {
-            border-color: black;
-        }
-        .active {
-            background-color: @taronja;
-            border-color: @taronja;
-        }
-    }
-    
-    .item {
-        margin: 90px 0 90px 0;
-    }
-    h2 {
-        color: @taronja;
-        font-weight: 900;
-        font-size: 2em;
-    }
-    
-    
-    .text-carousel {
+.arrivals {
+    .standard {
+        height: 405px;
+        border: 2px solid @gris-marge;
         position: relative;
-        float: left;
-        width: 80%;
-        z-index: 999;
-    }
-    
-    .imatge-carousel {
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 42%;
-        text-align: center;
-        height: 200px;
-        img {
+        > div {
             position: relative;
-            display: inline-block;
-            max-height: 200px;
+            top: 50%;
             -webkit-transform: translateY(-50%);
             -ms-transform: translateY(-50%);
             transform: translateY(-50%);
-            top: 50%;
+        }
+        .estrelles {
+            color: @taronja;
+        }
+        p:nth-child(2) {
+            font-weight: bold;
         }
     }
-    
-    .boto-carousel {
-        position: absolute;
-        right: 0;
-        top: 200px;
-        text-align: center;
-        width: 42%;
-        button {
-            margin-top: -10px;
+    .standard-taronja {
+        background-color: @taronja;
+        color: white;
+        .estrelles {
+            color: white;
         }
-        
+        border-color: @taronja;
     }
-    
-    
-    
 }
 
-@media (min-width: 768px) {
-    .carrousel-petit {
-        .text-carousel {
-            width: 65%;
+
+//*******************************
+
+.comentari {
+    position: relative;
+    background-color: @gris;
+    padding: 20px;
+    max-width: 350px;
+    margin: 0 auto;
+    .imatge {
+        img {
+            display: inline-block;
+
+        }
+    }
+    i:nth-child(2) {
+        margin-left: 15px;
+    }
+    .more {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        margin-right: 20px;
+    }
+    
+    &:hover {
+        -webkit-box-shadow: 0px 6px 25px -1px rgba(115,115,115,1);
+        -moz-box-shadow: 0px 6px 25px -1px rgba(115,115,115,1);
+        box-shadow: 0px 6px 25px -1px rgba(115,115,115,1);
+        
+        i {
+            color: @taronja;
         }
         
-        .imatge-carousel {
-            width: 35%;
-        }
-        
-        .boto-carousel {
-            float: left;
-            clear: left;
-            position: relative;
-            top: 0;
-            width: auto;
-            button {
-                margin-top: 0;
-            }
+        .more {
+            color: @taronja;
         }
     }
 }
+
+
+
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .arrivals {
+        .standard {
+            height: 258px;
+        }
+    }
+    
+    .comentari {
+        max-width: none;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .arrivals {
+        .standard {
+            height: 343px;
+        }
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    .arrivals {
+        .standard {
+            height: 405px;
+        }
+    }
+}
+
+
 
 
 
