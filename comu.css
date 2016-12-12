@@ -309,7 +309,6 @@ body {
 }
 footer {
   background-color: #F5F5F5;
-  padding-top: 30px;
 }
 footer .itemFooter button {
   float: left;
@@ -325,11 +324,7 @@ footer .social i {
   margin-top: 10px;
   display: block;
 }
-footer h3 {
-  margin-top: 5px;
-}
 #finalDeTot {
-  margin-top: 30px;
   background-color: #fe5722;
   color: white;
 }
@@ -340,7 +335,6 @@ footer h3 {
   }
   footer .social {
     text-align: left;
-    margin-top: -30px;
   }
   footer .social i {
     display: inline-block;
