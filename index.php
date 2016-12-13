@@ -30,7 +30,19 @@
     <!-- ################################################################## -->
     <main>
         
-        <div class="quadrats container">
+        <div class="container quadrats">
+            <div class="primer">
+                <img src="imatges/mens_wear.jpeg" />
+            </div>
+            <div class="segon">
+                <img src="imatges/shoes.png" />
+            </div>
+            <div class="tercer">
+                <img src="imatges/belt.png" />
+            </div>
+            <div class="quart">
+                <img src="imatges/women.jpeg" />
+            </div>
         
         </div>
         <!-- ################################################################## -->
