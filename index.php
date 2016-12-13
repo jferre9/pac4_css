@@ -29,6 +29,11 @@
     <?php include "header.html" ?>
     <!-- ################################################################## -->
     <main>
+        
+        <div class="quadrats container">
+        
+        </div>
+        <!-- ################################################################## -->
         <div class="container productes">
             <div class="titol text-center">
                 <h2>FEATURES PRODUCTS</h2>
@@ -49,6 +54,7 @@
         <?php include "slider2.html" ?>
         
         <div class="carrousel-petit">
+            <div class="container">
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
@@ -104,6 +110,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
         <!-- ###################################################### -->
