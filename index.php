@@ -22,133 +22,118 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/parallax.js"></script>
 </head>
+<!-- TODO: posar links a tot -->
 
-    
-    <!-- TODO: posar links a tot -->
 <body>
     <?php include "header.html" ?>
-    <!-- ################################################################## -->
-    <main>
-        
-        <div class="container quadrats">
-            <div class="primer">
-                <img src="imatges/mens_wear.jpeg" />
-            </div>
-            <div class="segon">
-                <img src="imatges/shoes.png" />
-            </div>
-            <div class="tercer">
-                <img src="imatges/belt.png" />
-            </div>
-            <div class="quart">
-                <img src="imatges/women.jpeg" />
-            </div>
-        
-        </div>
         <!-- ################################################################## -->
-        <div class="container productes">
-            <div class="titol text-center">
-                <h2>FEATURES PRODUCTS</h2>
-                <div class="linia-llarga"></div>
-                <div class="linia-curta"></div>
-                <div class="linia-llarga"></div>
-                <p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime.</p>
+        <main>
+            <div class="container quadrats">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="primer"> <img src="imatges/mens_wear.jpeg" class="img-responsive" /> </div>
+                        <div class="segon"> <img src="imatges/shoes2.png" class="img-responsive" /> </div>
+                        <div class="tercer"> <img src="imatges/belt.png" class="img-responsive" /> </div>
+                    </div>
+                    <div class="col-md-8 col-xs-12"><div class="quart"><img src="imatges/women.png" class="img-responsive" /> </div> </div>
+                </div>
             </div>
-            <div class="text-center">
-                <button class="boto-quadrat boto-taronja">All</button>
-                <button class="boto-quadrat">Blazers</button>
-                <button class="boto-quadrat">Cap &amp; Hats</button>
-                <button class="boto-quadrat">Shoes</button>
-                <button class="boto-quadrat">Hodies</button>
+            <!-- ################################################################## -->
+            <div class="container productes">
+                <div class="titol text-center">
+                    <h2>FEATURES PRODUCTS</h2>
+                    <div class="linia-llarga"></div>
+                    <div class="linia-curta"></div>
+                    <div class="linia-llarga"></div>
+                    <p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime.</p>
+                </div>
+                <div class="text-center">
+                    <button class="boto-quadrat boto-taronja">All</button>
+                    <button class="boto-quadrat">Blazers</button>
+                    <button class="boto-quadrat">Cap &amp; Hats</button>
+                    <button class="boto-quadrat">Shoes</button>
+                    <button class="boto-quadrat">Hodies</button>
+                </div>
             </div>
-        </div>
-        
-        <?php include "slider2.html" ?>
-        
-        <div class="carrousel-petit">
-            <div class="container">
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                </ol>
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <div class="container">
-                            <div class="row">
-                                <div class="text-carousel">
-                                    <h3>2016 TREND</h3>
-                                    <h2>NEW COLLECTION</h2>
-                                    <p>Hodor. Hodor hodor hodor? Hodor hodor - hodor, hodor. Hodor hodor... Hodor hodor hodor hodor! Hodor hodor - hodor - hodor</p>
-                                </div>
-                                <div class="imatge-carousel"> <img class="img-responsive" src="imatges/botes.png" /> </div>
-                                <div class="boto-carousel">
-                                    <button class="btn boto-blanc">SHOP NOW</button>
+            <?php include "slider2.html" ?>
+            <!-- ####################################################### -->
+            <div class="carrousel-petit">
+                <div class="container">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="text-carousel">
+                                            <h3>2016 TREND</h3>
+                                            <h2>NEW COLLECTION</h2>
+                                            <p>Hodor. Hodor hodor hodor? Hodor hodor - hodor, hodor. Hodor hodor... Hodor hodor hodor hodor! Hodor hodor - hodor - hodor</p>
+                                        </div>
+                                        <div class="imatge-carousel"> <img class="img-responsive" src="imatges/botes.png" /> </div>
+                                        <div class="boto-carousel">
+                                            <button class="btn boto-blanc">SHOP NOW</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="container">
-                            <div class="row">
-                                <div class="text-carousel">
-                                    <h3>2016 TREND</h3>
-                                    <h2>NEW COLLECTION</h2>
-                                    <p>Hodor. Hodor hodor hodor? Hodor hodor - hodor, hodor. Hodor hodor... Hodor hodor hodor hodor! Hodor hodor - hodor - hodor</p>
-                                </div>
-                                <div class="imatge-carousel"> <img class="img-responsive" src="imatges/botes.png" /> </div>
-                                <div class="boto-carousel">
-                                    <button class="btn boto-blanc">SHOP NOW</button>
+                            <div class="item">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="text-carousel">
+                                            <h3>2016 TREND</h3>
+                                            <h2>NEW COLLECTION</h2>
+                                            <p>Hodor. Hodor hodor hodor? Hodor hodor - hodor, hodor. Hodor hodor... Hodor hodor hodor hodor! Hodor hodor - hodor - hodor</p>
+                                        </div>
+                                        <div class="imatge-carousel"> <img class="img-responsive" src="imatges/botes.png" /> </div>
+                                        <div class="boto-carousel">
+                                            <button class="btn boto-blanc">SHOP NOW</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="container">
-                            <div class="row">
-                                <div class="text-carousel">
-                                    <h3>2016 TREND</h3>
-                                    <h2>NEW COLLECTION</h2>
-                                    <p>Hodor. Hodor hodor hodor? Hodor hodor - hodor, hodor. Hodor hodor... Hodor hodor hodor hodor! Hodor hodor - hodor - hodor</p>
-                                </div>
-                                <div class="imatge-carousel"> <img class="img-responsive" src="imatges/botes.png" /> </div>
-                                <div class="boto-carousel">
-                                    <button class="btn boto-blanc">SHOP NOW</button>
+                            <div class="item">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="text-carousel">
+                                            <h3>2016 TREND</h3>
+                                            <h2>NEW COLLECTION</h2>
+                                            <p>Hodor. Hodor hodor hodor? Hodor hodor - hodor, hodor. Hodor hodor... Hodor hodor hodor hodor! Hodor hodor - hodor - hodor</p>
+                                        </div>
+                                        <div class="imatge-carousel"> <img class="img-responsive" src="imatges/botes.png" /> </div>
+                                        <div class="boto-carousel">
+                                            <button class="btn boto-blanc">SHOP NOW</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            </div>
-        </div>
-        <!-- ###################################################### -->
-        <!-- SLIDER STANDARD LOREM IPSUM -->
-        <?php include "slider3.html" ?>
-        <!-- ###################################################### -->
-        <div class="ceo">
-        
-        </div>
-        <!-- ###################################################### -->
-        <!-- SLIDER BLOG -->
-        <?php include "slider4.html" ?>
-        <!-- ###################################################### -->
-        
-        <?php include "abans_footer.html" ?>
-        
-        
+            <!-- ###################################################### -->
+            <!-- SLIDER STANDARD LOREM IPSUM -->
+            <?php include "slider3.html" ?>
+            <!-- ###################################################### -->
+            <div class="ceo"> </div>
+            <!-- ###################################################### -->
+            <!-- SLIDER BLOG -->
+            <?php include "slider4.html" ?>
+            <!-- ###################################################### -->
+            <?php include "abans_footer.html" ?>
     </main>
     <!-- ################################################################## -->
-    
     <?php include "footer.html" ?>
-    
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>

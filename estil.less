@@ -19,6 +19,57 @@ body {
 }
 
 
+.quadrats {
+    
+    .segon, .tercer, .quart {
+        background-color: @gris;
+    }
+    
+    .primer {
+        margin-bottom: 10px;
+        img {
+            min-height: 100%;
+        }
+    }
+    
+    .segon {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    
+    
+    
+    .segon , .tercer {
+        position: relative;
+        float: left;
+        width: ~"calc(50% - 5px)";
+        padding: 10px;
+        height: 500px;
+        
+        img {
+            position: relative;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            
+        }
+        
+    }
+    
+    
+    
+    .quart {
+        overflow: auto;
+        img {
+            float: right;
+        }
+    }
+        
+    
+    
+}
+
 .titol {
     .linia-curta {
         display: inline-block;
@@ -416,6 +467,9 @@ footer {
     .centrar-petit {
         text-align: left;
     }
+    
+    
+    
     footer {
         .social {
             text-align: left;
@@ -468,6 +522,15 @@ footer {
     .arrivals {
         .standard {
             height: 343px;
+        }
+    }
+    
+    .quadrats {
+        .primer, .segon, .tercer {
+            height: 265px;
+        }
+        .col-md-8 {
+            padding: 0;
         }
     }
 }
