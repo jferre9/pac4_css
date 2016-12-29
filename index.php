@@ -10,6 +10,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="comu.css">
     <link rel="stylesheet" href="estil.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,6 +29,65 @@
     <?php include "header.html" ?>
         <!-- ################################################################## -->
         <main>
+            
+            
+            <div id="primerCarousel" class="carousel slide hidden-xs" data-ride="carousel">
+  <!-- Indicators -->
+  <!--ol class="carousel-indicators">
+    <li data-target="#primerCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#primerCarousel" data-slide-to="1"></li>
+  </ol-->
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="imatges/primera.jpg" alt="Chania">
+        <div class="caption">
+            <div class="container">
+                <div class="row">
+                    <h2>Fasion for <span class="text-taronja">New Trend</span></h2>
+                    <p>Well, the way they make shows is, they make one show. <br>That show's called a pilot.</p>
+                    <button class="btn read-more">READ MORE</button>
+                    <button class="btn boto-taronja">SHOP NOW</button>
+                </div>
+            </div>
+        </div>
+        <div class="next-img right carousel-control">
+            <img src="imatges/miniatura.png">
+        </div>
+    </div>
+
+    <div class="item">
+      <img src="imatges/primera.jpg" alt="Chania">
+        <div class="caption">
+            <div class="container">
+                <div class="row">
+                    <h2>Fasion for <span class="text-taronja">New Trend</span></h2>
+                    <p>Well, the way they make shows is, they make one show. <br>That show's called a pilot.</p>
+                    <button class="btn">READ MORE</button>
+                    <button class=" btn boto-taronja">SHOP NOW</button>
+                </div>
+            </div>
+        </div>
+        <div class="next-img right carousel-control">
+            <img src="imatges/miniatura.png">
+        </div>
+    </div>
+
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#primerCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#primerCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+            
+            
             <div class="container quadrats">
                 <div class="row">
                     <div class="col-md-4">

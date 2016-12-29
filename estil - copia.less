@@ -5,15 +5,6 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-    &:hover {
-        text-decoration: none;
-        color: inherit;
-    }
-}
-
 .logotip {
     font-family: 'Rock Salt', cursive;
 }
@@ -22,72 +13,83 @@ a {
     color: white;
 }
 
-.text-taronja {
-    color: @taronja;
-}
 .boto-quadrat {
     border: solid @gris-marge 1px;
     background-color: white;
 }
 
-@header: 70px;
-header {
-    height: @header;
+
+.quadrats {
     
-    a {
-        display: inline-block;
-        height: @header;
-        padding-right: 10px;
-        padding-left: 10px;
+    .segon, .tercer, .quart {
+        background-color: @gris;
     }
     
-    .container {
-        position: relative;
-    }
-    
-    .logotip, .links, .icones {
-        line-height: @header;
-    }
-    
-    .logotip {
-        float: left;
-        h2 {
-            font-size: 2em;
+    .primer {
+        margin-bottom: 10px;
+        img {
+            min-height: 100%;
         }
     }
     
-    .links {
-        
+    .segon {
+        margin-right: 10px;
+        margin-bottom: 10px;
     }
     
-    .icones {
-        position: absolute;
-        top: 0;
-        right: 0;
-        
-    }
     
-    .actiu {
+    
+    .segon , .tercer {
         position: relative;
+        float: left;
+        width: ~"calc(50% - 5px)";
+        padding: 10px;
+        height: 500px;
+        
+        img {
+            position: relative;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            
+        }
+        
     }
     
-    .actiu:after {
-        content: '';
-        position: absolute;
-        left: 10%;
-        bottom: 4px;
-        height: 3px;
-        width: 80%;
-        background-color: @taronja;
+    
+    
+    .quart {
+        overflow: auto;
+        img {
+            float: right;
+        }
     }
+        
+    
     
 }
 
-
-.btn:hover {
-    color: inherit;
+.titol {
+    .linia-curta {
+        display: inline-block;
+        height: 1px;
+        width: 10px;
+        border-top: dashed 2px black;
+    }
+    .linia-llarga {
+        display: inline-block;
+        height: 1px;
+        width: 100px;
+        border-top: solid 2px @taronja;
+    }
+    h2 {
+        margin-bottom: 0;
+    }
+    p {
+        margin-top: 10px;
+    }
 }
-
 
 .abansFooter {
     margin-top: 50px;
@@ -119,13 +121,6 @@ header {
     background-color: @taronja;
     color: white;
     border: 1px solid @taronja;
-    
-    &:hover {
-        color: white;
-        -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
-    }
 }
 
 .boto-blanc {
@@ -134,8 +129,19 @@ box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
 }
 
 
-//*********************/
+//*********************
 
+.boto-slider {
+    padding: 5px;
+    color: black;
+    text-decoration: none !important;
+    margin-bottom: 10px;
+    
+    + a {
+        color: @taronja;
+    }
+    
+}
 
 .col-item {
     position: relative;
@@ -250,10 +256,78 @@ box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
     color: #a5a5a5;
 }
 
+.carousel-mobil {
+    text-align: center;
+    .col-item {
+        display: inline-block;
+    }
+}
 
 
 
-//**********************/
+//**********************
+
+.carrousel-petit {
+    background-color: @gris;
+    position: relative;
+    
+    .carousel-indicators {
+        li {
+            border-color: black;
+        }
+        .active {
+            background-color: @taronja;
+            border-color: @taronja;
+        }
+    }
+    
+    .item {
+        margin: 90px 0 90px 0;
+    }
+    h2 {
+        color: @taronja;
+        font-weight: 900;
+        font-size: 2em;
+    }
+    
+    
+    .text-carousel {
+        position: relative;
+        float: left;
+        width: 80%;
+        z-index: 999;
+    }
+    
+    .imatge-carousel {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 42%;
+        text-align: center;
+        height: 200px;
+        img {
+            position: relative;
+            display: inline-block;
+            max-height: 200px;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            top: 50%;
+        }
+    }
+    
+    .boto-carousel {
+        position: absolute;
+        right: 0;
+        top: 200px;
+        text-align: center;
+        width: 42%;
+        button {
+            margin-top: -10px;
+        }
+        
+    }
+}
 
 .centrar-petit {
     text-align: center;
@@ -277,6 +351,77 @@ box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
     }
     &:-ms-input-placeholder {
         color: @gris;
+    }
+}
+
+.arrivals {
+    margin-bottom: 30px;
+    .standard {
+        height: 405px;
+        border: 2px solid @gris-marge;
+        position: relative;
+        > div {
+            position: relative;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+        .estrelles {
+            color: @taronja;
+        }
+        p:nth-child(2) {
+            font-weight: bold;
+        }
+    }
+    .standard-taronja {
+        background-color: @taronja;
+        color: white;
+        .estrelles {
+            color: white;
+        }
+        border-color: @taronja;
+    }
+}
+
+
+.blog {
+    margin-bottom: 30px;
+}
+
+.comentari {
+    position: relative;
+    background-color: @gris;
+    padding: 20px;
+    max-width: 350px;
+    margin: 0 auto;
+    .imatge {
+        img {
+            display: inline-block;
+        }
+    }
+    i:nth-child(2) {
+        margin-left: 15px;
+    }
+    .more {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        margin-right: 20px;
+    }
+    
+    &:hover {
+        -webkit-box-shadow: 0px 6px 25px -1px rgba(115,115,115,1);
+        -moz-box-shadow: 0px 6px 25px -1px rgba(115,115,115,1);
+        box-shadow: 0px 6px 25px -1px rgba(115,115,115,1);
+        
+        i {
+            color: @taronja;
+        }
+        
+        .more {
+            color: @taronja;
+        }
     }
 }
 
@@ -335,73 +480,67 @@ footer {
             }
         }
     }
+    .carrousel-petit {
+        .text-carousel {
+            width: 65%;
+        }
+        
+        .imatge-carousel {
+            width: 35%;
+        }
+        
+        .boto-carousel {
+            float: left;
+            clear: left;
+            position: relative;
+            top: 0;
+            width: auto;
+            button {
+                margin-top: 0;
+            }
+        }
+        
+        h2 {
+            font-size: 2.5em;
+        }
+    }
     
     
+    .comentari {
+        max-width: none;
+    }
+    
+    .arrivals {
+        .standard {
+            height: 258px;
+        }
+    }
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
+    .arrivals {
+        .standard {
+            height: 343px;
+        }
+    }
     
+    .quadrats {
+        .primer, .segon, .tercer {
+            height: 265px;
+        }
+        .col-md-8 {
+            padding: 0;
+        }
+    }
 }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
-    
+    .arrivals {
+        .standard {
+            height: 405px;
+        }
+    }
 }
 
-/*
-
-<header>
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header pull-left"> <a class="navbar-brand" href="#">Brand</a> </div>
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header pull-right">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                    <div class="navbar-header pull-right">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="pull-right"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                            <li class="pull-right"><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
-                            <li class="pull-right"><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">HOME <span class="sr-only">(current)</span></a></li>
-                        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MEGAMENU <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">One more separated link</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">SHOP</a></li>
-                        <li><a href="#">BLOG</a></li>
-                        <li><a href="#">PORTFOLIO</a></li>
-                        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PAGES <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">One more separated link</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-            </div>
-            <!-- /.container-fluid -->
-        </nav>
-    </header>
-
-
-*/
