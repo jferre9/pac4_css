@@ -1,6 +1,8 @@
 @taronja: #FE5722;
 @gris: #F1F1F1;
 @gris-marge: #cccccc;
+@marge: 40px;
+
 body {
     font-family: 'Open Sans', sans-serif;
 }
@@ -16,6 +18,13 @@ a {
 
 .logotip {
     font-family: 'Rock Salt', cursive;
+    img {
+        height: 30px;
+    }
+    h1 {
+        display: inline-block;
+        //font-family: 'Rock Salt', cursive;
+    }
 }
 
 .text-blanc {
@@ -31,14 +40,46 @@ a {
 }
 
 @header: 70px;
-header {
-    height: @header;
+#header {
+    > .container {
+        height: @header;
+    }
     
-    a {
+    /*a {
         display: inline-block;
         height: @header;
         padding-right: 10px;
         padding-left: 10px;
+    }*/
+    
+    .links, .icones {
+        
+        > a, .btn-group > a {
+            display: inline-block;
+            height: @header;
+            padding-right: 10px;
+            padding-left: 10px;
+            
+            &:focus, &:hover {
+                color: inherit;
+                text-decoration: none;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: 10%;
+                    bottom: 4px;
+                    height: 3px;
+                    width: 80%;
+                    background-color: @taronja;
+                }
+            }
+        }
+    }
+    
+    
+    
+    .btn-group.open .dropdown-toggle {
+        box-shadow: none;
     }
     
     .container {
@@ -51,8 +92,8 @@ header {
     
     .logotip {
         float: left;
-        h2 {
-            font-size: 2em;
+        h1 {
+            font-size: 1.5em;
         }
     }
     
@@ -67,7 +108,7 @@ header {
         
     }
     
-    .actiu {
+    a {
         position: relative;
     }
     
@@ -123,8 +164,8 @@ header {
     &:hover {
         color: white;
         -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
     }
 }
 
@@ -175,14 +216,20 @@ box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
         transform: translateY(-50%);
         text-align: center;
         color: white;
-        i {
-            padding-left: 5px;
-            padding-right: 5px;
-            position: relative;
+        a {
+            i {
+                height: 25px;
+                padding-left: 5px;
+                padding-right: 5px;
+                position: relative;
+            }
             //font-size: 1.5em;
             
-            &:nth-child(2):hover {
+            &:hover {
                 color: @taronja;
+            }
+            
+            &:nth-child(2):hover {
                 .hover-carrito {
                     display: block;
                 }
@@ -191,7 +238,7 @@ box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
                 font-family: 'Open Sans', sans-serif;
                 color: white;
                 position: absolute;
-                top: ~"calc(100% + 7px)";
+                top: ~"calc(100% - 1px)";
                 left: 50%;
                 -webkit-transform: translateX(-50%);
                 -ms-transform: translateX(-50%);
@@ -280,6 +327,31 @@ box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
     }
 }
 
+//cercador i carrito
+
+#fons-titol {
+    height: 300px;
+    width: 100%;
+    background: url(imatges/fons-botiga.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+    margin-bottom: @marge;
+    
+    h2 {
+        font-weight: bold;
+    }
+    
+    a {
+        color: @taronja;
+    }
+}
+
 
 
 //Footer -----------------
@@ -310,9 +382,13 @@ footer {
 }
 
 #finalDeTot {
+    padding-top: 10px;
     margin-top: @marge-footer;
     background-color: @taronja;
     color: white;
+    img {
+        height: 20px;
+    }
 }
 
 
@@ -349,59 +425,3 @@ footer {
     
 }
 
-/*
-
-<header>
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header pull-left"> <a class="navbar-brand" href="#">Brand</a> </div>
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header pull-right">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                    <div class="navbar-header pull-right">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="pull-right"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                            <li class="pull-right"><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
-                            <li class="pull-right"><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">HOME <span class="sr-only">(current)</span></a></li>
-                        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MEGAMENU <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">One more separated link</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">SHOP</a></li>
-                        <li><a href="#">BLOG</a></li>
-                        <li><a href="#">PORTFOLIO</a></li>
-                        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PAGES <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">One more separated link</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-            </div>
-            <!-- /.container-fluid -->
-        </nav>
-    </header>
-
-
-*/

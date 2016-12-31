@@ -1,0 +1,149 @@
+#tags div,
+#mida div {
+  display: inline-block;
+  border: 1px solid #999999;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+#tags .selected,
+#mida .selected {
+  border-color: black;
+  color: black;
+}
+#tags,
+#mida,
+#categories,
+#compare {
+  color: #BBBBBB;
+}
+#tags div,
+#mida div,
+#colors div {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+#compare .item-compare {
+  overflow: auto;
+  border-bottom: 1px solid #BBBBBB;
+  margin-top: 15px;
+  height: 35px;
+}
+#compare .item-compare p {
+  display: inline-block;
+  float: left;
+  clear: left;
+}
+#compare .item-compare i {
+  float: right;
+}
+#compare .botons {
+  overflow: auto;
+  line-height: 30px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+#compare .botons a {
+  color: #FE5722;
+  font-weight: bold;
+}
+#compare .botons button {
+  background-color: #372F2D;
+  color: white;
+  border-radius: 2px;
+  padding: 0 10px 0 10px;
+  line-height: 30px;
+  height: 30px;
+  float: right;
+}
+#mida div {
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+}
+#tags div {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#colors div {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border-radius: 2px;
+}
+#colors .blanc {
+  background-color: #222222;
+}
+#colors .blau {
+  background-color: #668FBD;
+}
+#colors .taronja {
+  background-color: #FE5722;
+}
+#colors .vermell {
+  background-color: #7E2A41;
+}
+#colors .negre {
+  background-color: #372F2D;
+}
+#colors .rosa {
+  background-color: #E967A7;
+}
+#best-seller div {
+  overflow: auto;
+  margin-bottom: 20px;
+}
+#best-seller div img {
+  float: left;
+  height: 50px;
+  border: 1px solid #BBBBBB;
+  margin-right: 10px;
+}
+#best-seller div p {
+  margin-bottom: 5px;
+}
+#best-seller div p + p {
+  font-weight: bold;
+}
+.filtre h3 + hr {
+  border-width: 3px;
+}
+.filtre h3,
+.filtre h4 {
+  font-weight: bold;
+}
+.filtre h3 {
+  font-size: 1.4em;
+}
+.filtre h4 {
+  font-size: 1em;
+}
+.filtre h4 + hr {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.grid-productes .col-xs-12.col-sm-6.col-md-4 {
+  text-align: center;
+}
+.grid-productes .col-xs-12.col-sm-6.col-md-4 .col-item {
+  display: inline-block;
+}
+.grid-productes .pagines {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.grid-productes .pagines a {
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  text-align: center;
+  background-color: #F5F5F5;
+  margin-right: 10px;
+}
+.grid-productes .pagines a:hover {
+  background-color: #FE5722;
+  color: white;
+}
+/*# sourceMappingURL=cercador.css.map */

@@ -64,7 +64,7 @@
                 <div class="row">
                     <h2>Fasion for <span class="text-taronja">New Trend</span></h2>
                     <p>Well, the way they make shows is, they make one show. <br>That show's called a pilot.</p>
-                    <button class="btn">READ MORE</button>
+                    <button class="btn read-more">READ MORE</button>
                     <button class=" btn boto-taronja">SHOP NOW</button>
                 </div>
             </div>
@@ -91,11 +91,27 @@
             <div class="container quadrats">
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="primer"> <img src="imatges/mens_wear.jpeg" class="img-responsive" /> </div>
-                        <div class="segon"> <img src="imatges/shoes2.png" class="img-responsive" /> </div>
-                        <div class="tercer"> <img src="imatges/belt.png" class="img-responsive" /> </div>
+                        <div class="primer"> <img src="imatges/mens_wear.jpeg" class="img-responsive" />
+                            <div class="hover"><h2>MEN'S WEAR</h2></div>
+                        </div>
+                        <div class="segon"> <img src="imatges/shoes2.png" class="img-responsive" /> 
+                            <div class="hover"><h2>MEN'S<br>SHOES</h2></div>
+                        </div>
+                        <div class="tercer"> <img src="imatges/belt.png" class="img-responsive" /> 
+                            <div class="new">
+                                <h2>NEW</h2>
+                                <div class="triangle-esquerra"></div>
+                                <div class="triangle-dreta"></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-8 col-xs-12"><div class="quart"><img src="imatges/women.png" class="img-responsive" /> </div> </div>
+                    <div class="col-md-8 col-xs-12"><div class="quart"><img src="imatges/women.png" class="img-responsive" /> 
+                        <div class="women">
+                            <h2>WOMEN'S COLLECTION</h2>
+                            <p>You think water moves fast? You should see ice. It moves like it has a mind.</p>
+                            <button class="btn boto-taronja">SHOP NOW</button>
+                        </div>
+                        </div> </div>
                 </div>
             </div>
             <!-- ################################################################## -->
