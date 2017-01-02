@@ -39,27 +39,32 @@ a {
     background-color: white;
 }
 
+
+
+
 @header: 70px;
 #header {
+    position: relative;
+    
     > .container {
         height: @header;
     }
-    
+
     /*a {
         display: inline-block;
         height: @header;
         padding-right: 10px;
         padding-left: 10px;
     }*/
-    
+
     .links, .icones {
-        
+
         > a, .btn-group > a {
             display: inline-block;
             height: @header;
             padding-right: 10px;
             padding-left: 10px;
-            
+
             &:focus, &:hover {
                 color: inherit;
                 text-decoration: none;
@@ -75,43 +80,44 @@ a {
             }
         }
     }
-    
-    
-    
+
+
+
     .btn-group.open .dropdown-toggle {
         box-shadow: none;
     }
-    
+
     .container {
         position: relative;
     }
-    
+
     .logotip, .links, .icones {
         line-height: @header;
     }
-    
+
     .logotip {
         float: left;
         h1 {
             font-size: 1.5em;
         }
     }
-    
+
     .links {
-        
+
     }
-    
+
     .icones {
         position: absolute;
         top: 0;
         right: 0;
-        
+        //float: right;
+
     }
-    
+
     a {
         position: relative;
     }
-    
+
     .actiu:after {
         content: '';
         position: absolute;
@@ -121,8 +127,111 @@ a {
         width: 80%;
         background-color: @taronja;
     }
+
+    .boto-header {
+        float: right;
+        background-color: transparent;
+        background-image: none;
+        margin-bottom: 8px;
+        margin-top: 11px;
+        padding: 9px 10px;
+        position: relative;
+        font-size: 1.5em;
+        border-width: 0;
+        line-height: 30px;
+        color: @taronja;
+
+        &.collapsed {
+            color: inherit;
+
+        }
+
+    }
+
+    #megamenu {
+        position: absolute;
+        top: @header;
+        left: 20%;
+        width: 60%;
+        border: 1px solid @gris-marge;
+        border-top: solid 3px @taronja;
+        background-color: white;
+        z-index: 10;
+    }
     
+    .megamenu {
+        padding: 10px;
+
+        a {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        a:hover {
+            color: @taronja;
+            padding-left: 10px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            font-weight: bolder;
+        }
+
+        .imatge-megamenu {
+            div {
+                display: inline-block;
+                position: relative;
+                div {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    background-color: rgba(254, 87, 34, 0.6);
+                    padding: 10px 20px 10px 20px;
+                    font-size: 1.5em;
+
+                    p {
+                        color: white;
+                        font-weight: bold;
+                        margin-bottom: 0;
+
+                        + p {
+                            text-align: right;
+                        }
+                    }
+
+                }
+
+                img {
+                    margin-top: 25px;
+                    max-height: 200px;
+                }
+            }
+        }
+    }
+    
+    #carrito {
+        position: absolute;
+        top: @header;
+        right: 0;
+        border: 1px solid @gris-marge;
+        border-top: solid 3px @taronja;
+        background-color: white;
+        z-index: 10;
+        
+        width: 150px;
+        
+        .item-carrito {
+            img {
+                width: 50px;
+            }
+        }
+        
+    }
+
+
 }
+
 
 
 .btn:hover {
@@ -160,7 +269,7 @@ a {
     background-color: @taronja;
     color: white;
     border: 1px solid @taronja;
-    
+
     &:hover {
         color: white;
         -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
@@ -180,11 +289,11 @@ a {
 
 .col-item {
     position: relative;
-    
+
     .photo {
         position: relative;
     }
-    
+
     .preu {
         position: absolute;
         top: 10px;
@@ -224,11 +333,11 @@ a {
                 position: relative;
             }
             //font-size: 1.5em;
-            
+
             &:hover {
                 color: @taronja;
             }
-            
+
             &:nth-child(2):hover {
                 .hover-carrito {
                     display: block;
@@ -243,23 +352,23 @@ a {
                 -webkit-transform: translateX(-50%);
                 -ms-transform: translateX(-50%);
                 transform: translateX(-50%);
-                
-                //font-size: 1em;
+
+                //font-size: 1em; 
                 width: 100px;
                 background-color: @taronja;
                 display: none;
                 text-align: center;
                 border-radius: 5px;
-                
+
                 height: 30px;
                 line-height: 30px;
-                
+
                 .arrow-up {
                     width: 0; 
                     height: 0; 
                     border-left: 5px solid transparent;
                     border-right: 5px solid transparent;
-                    
+
                     border-bottom: 5px solid @taronja;
                     position: absolute;
                     top: -5px;
@@ -268,19 +377,19 @@ a {
             }
         }
     }
-    
+
     &:hover {
         .hover-item {
             display: block;
         }
-        
+
         .photo {
             -webkit-box-shadow: 0px 6px 25px -1px rgba(115,115,115,1);
             -moz-box-shadow: 0px 6px 25px -1px rgba(115,115,115,1);
             box-shadow: 0px 6px 25px -1px rgba(115,115,115,1);
         }
     }
-    
+
     .peu-slider {
         padding-top: 10px;
         text-align: center;
@@ -290,7 +399,7 @@ a {
             color: @taronja;
         }
     }
-    
+
 }
 
 .estrella-gris {
@@ -337,16 +446,16 @@ a {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    
+
     color: white;
     text-align: center;
     padding-top: 100px;
     margin-bottom: @marge;
-    
+
     h2 {
         font-weight: bold;
     }
-    
+
     a {
         color: @taronja;
     }
@@ -375,7 +484,7 @@ footer {
             display: block;
         }
     }
-    
+
     h3 {
         margin-top: 5px;
     }
@@ -398,9 +507,9 @@ footer {
     .centrar-petit {
         text-align: left;
     }
-    
-    
-    
+
+
+
     footer {
         .social {
             text-align: left;
@@ -411,17 +520,17 @@ footer {
             }
         }
     }
-    
-    
+
+
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
-    
+
 }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
-    
+
 }
 

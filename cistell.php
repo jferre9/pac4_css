@@ -48,30 +48,55 @@
                                 <th class="hidden-sm hidden-xs">TOTAL</th>
                                 <th>CART</th>
                             </tr>
+                            <tr>
+                                <td class="hidden-xs"><img class="img-responsive" src="imatges/slider2/1.jpg"></td>
+                                <td>Very Me Smoothie Foundation</td>
+                                <td>$128.00</td>
+                                <td>
+                                    <input type="text" name="quant[2]" class="input-number"  value="1" min="1" max="100" readonly="">
+                                    <div>
+                                        <a class="btn-number" data-type="plus" data-field="quant[2]">
+                                            +
+                                        </a>
+                                        <a class="btn-number"  data-type="minus" data-field="quant[2]">
+                                            -
+                                        </a>
+                                    </div>
+                                </td>
+                                <td class="hidden-sm hidden-xs">$128.00</td>
+                                <td><i class="fa fa-shopping-basket" aria-hidden="true"></i></td>
+                            </tr>
                         </table>
                     </div>
-                    <div class="col-xs-6">
+                    <!--div class="col-xs-6">
                         <button class="btn">CONTINUE SHOPPING</button>    
                     </div>
                     <div class="col-xs-6 text-right">
                         <button class="btn">UPDATE</button>
                         <button class="btn boto-taronja">CHECKOUT</button>
+                    </div-->
+                    <div class="col-xs-12 botons-cistell">
+                        <button class="btn">CONTINUE SHOPPING</button>
+                        <div class="text-right">
+                            <button class="btn">UPDATE</button>
+                            <button class="btn boto-taronja">CHECKOUT</button>
+                        </div>
                     </div>
                     <div class="col-xs-12">
                         <hr>
                     </div>
-                    
+
                     <div class="col-xs-12 col-md-6">
                         <div id="discount">
-                            
+
                         </div>
                     </div>
                     <div class="col-xs-12 col-md-6">
                         <div id="cart-total">
-                            
+
                         </div>
                     </div>
-                    
+
                 </div>
 
 
@@ -91,6 +116,82 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+
+            //plugin bootstrap minus and plus
+//http://jsfiddle.net/laelitenetwork/puJ6G/
+            $('.btn-number').click(function (e) {
+                e.preventDefault();
+
+                fieldName = $(this).attr('data-field');
+                type = $(this).attr('data-type');
+                var input = $("input[name='" + fieldName + "']");
+                var currentVal = parseInt(input.val());
+                if (!isNaN(currentVal)) {
+                    if (type == 'minus') {
+
+                        if (currentVal > input.attr('min')) {
+                            input.val(currentVal - 1).change();
+                        }
+                        if (parseInt(input.val()) == input.attr('min')) {
+                            $(this).attr('disabled', true);
+                        }
+
+                    } else if (type == 'plus') {
+
+                        if (currentVal < input.attr('max')) {
+                            input.val(currentVal + 1).change();
+                        }
+                        if (parseInt(input.val()) == input.attr('max')) {
+                            $(this).attr('disabled', true);
+                        }
+
+                    }
+                } else {
+                    input.val(0);
+                }
+            });
+            $('.input-number').focusin(function () {
+                $(this).data('oldValue', $(this).val());
+            });
+            $('.input-number').change(function () {
+
+                minValue = parseInt($(this).attr('min'));
+                maxValue = parseInt($(this).attr('max'));
+                valueCurrent = parseInt($(this).val());
+
+                name = $(this).attr('name');
+                if (valueCurrent >= minValue) {
+                    $(".btn-number[data-type='minus'][data-field='" + name + "']").removeAttr('disabled')
+                } else {
+                    alert('Sorry, the minimum value was reached');
+                    $(this).val($(this).data('oldValue'));
+                }
+                if (valueCurrent <= maxValue) {
+                    $(".btn-number[data-type='plus'][data-field='" + name + "']").removeAttr('disabled')
+                } else {
+                    alert('Sorry, the maximum value was reached');
+                    $(this).val($(this).data('oldValue'));
+                }
+
+
+            });
+            $(".input-number").keydown(function (e) {
+                // Allow: backspace, delete, tab, escape, enter and .
+                if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 190]) !== -1 ||
+                        // Allow: Ctrl+A
+                                (e.keyCode == 65 && e.ctrlKey === true) ||
+                                // Allow: home, end, left, right
+                                        (e.keyCode >= 35 && e.keyCode <= 39)) {
+                            // let it happen, don't do anything
+                            return;
+                        }
+                        // Ensure that it is a number and stop the keypress
+                        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+                            e.preventDefault();
+                        }
+                    });
+        </script>
     </body>
 
 </html>

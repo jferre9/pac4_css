@@ -1,0 +1,86 @@
+@taronja: #FE5722;
+//@gris: #BBBBBB;
+@gris: #F1F1F1;
+@gris-marge: #cccccc;
+
+@padding-taula: 15px;
+@mida-input: 40px;
+
+.cistell {
+    table {
+        max-width: 100%;
+        width: 100%;
+        img {
+            height: 100px;
+        }
+        tr:first-child {
+            border-bottom: 1px solid @gris;
+        }
+        td, th {
+            padding-bottom: @padding-taula;
+            padding-top: @padding-taula;
+        }
+        
+        td:nth-child(3), td:nth-child(5) {
+            font-weight: bold;
+            
+        }
+        td:nth-child(4) {
+            min-width: @mida-input*2+1;
+            input {
+                border-width: 0;
+                background-color: @gris;
+                box-sizing: border-box;
+                height: @mida-input;
+                text-align: center;
+                width: @mida-input;
+                float: left;
+            }
+            div {
+                float: left;
+                display: inline-block;
+                border-left: 1px solid @gris-marge;
+                background-color: @gris;
+                
+                a {
+                    display: block;
+                    height: @mida-input/2;
+                    width: 30px;
+                    text-align: center;
+                    font-size: 0.7em;
+                    line-height:  @mida-input/2;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    
+    .botons-cistell {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        div {
+            float: right;
+            
+        }
+        
+        button {
+            font-size: 0.75em;
+        }
+    }
+}
+
+
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+    
+    .cistell {
+        .botons-cistell {
+            button {
+                font-size: 1em;
+            }
+        }
+    }
+    
+}
