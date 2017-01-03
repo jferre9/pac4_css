@@ -45,7 +45,7 @@ a {
 @header: 70px;
 #header {
     position: relative;
-    
+
     > .container {
         height: @header;
     }
@@ -158,7 +158,7 @@ a {
         background-color: white;
         z-index: 10;
     }
-    
+
     .megamenu {
         padding: 10px;
 
@@ -188,7 +188,7 @@ a {
                     width: 100%;
                     background-color: rgba(254, 87, 34, 0.6);
                     padding: 10px 20px 10px 20px;
-                    font-size: 1.5em;
+                    font-size: 1.2em;
 
                     p {
                         color: white;
@@ -209,7 +209,7 @@ a {
             }
         }
     }
-    
+
     #carrito {
         position: absolute;
         top: @header;
@@ -218,15 +218,91 @@ a {
         border-top: solid 3px @taronja;
         background-color: white;
         z-index: 10;
-        
-        width: 150px;
-        
+
+        width: 200px;
+
         .item-carrito {
-            img {
-                width: 50px;
+            overflow: auto;
+            height: 85px;
+            margin-top: 7px;
+
+            .imatge-carrito {
+                float: left;
+                width: 25%;
+                padding-top: 13px;
+                img {
+                    display: block;
+                    max-width: 90%;
+                    border: 1px solid @gris;
+                    margin: 0 auto;
+                }
             }
+
+            .nom-carrito {
+                float: left;
+                width: 55%;
+
+
+                h4 {
+                    font-size: 1em;
+                    font-weight: bold;
+                }
+
+                p {
+                    font-size: 0.9em;
+                }
+            }
+
+            .boto-carrito {
+                float: left;
+                width: 20%;
+                padding-top: 26px;
+                text-align: center;
+                
+                button {
+                    border-radius: 0;
+                    width: 25px;
+                    height: 25px;
+                    padding: 0;
+                    line-height: 25px;
+                }
+            }
+
         }
         
+        hr {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .preu-carrito {
+
+            padding: 10px;
+
+            button {
+                border-radius: 10px;
+                font-weight: bold;
+                font-size: 0.9em;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            
+            div {
+                position: relative;
+            }
+            
+            div p {
+                font-size: 0.9em;
+            }
+
+            div p + p {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+
+        }
+
     }
 
 
@@ -292,6 +368,7 @@ a {
 
     .photo {
         position: relative;
+        border: 1px solid @gris-marge;
     }
 
     .preu {

@@ -1,26 +1,29 @@
-.cistell table {
+.cistell {
+  margin-bottom: 40px;
+}
+.cistell .taula-productes {
   max-width: 100%;
   width: 100%;
 }
-.cistell table img {
+.cistell .taula-productes img {
   height: 100px;
 }
-.cistell table tr:first-child {
+.cistell .taula-productes tr:first-child {
   border-bottom: 1px solid #F1F1F1;
 }
-.cistell table td,
-.cistell table th {
+.cistell .taula-productes td,
+.cistell .taula-productes th {
   padding-bottom: 15px;
   padding-top: 15px;
 }
-.cistell table td:nth-child(3),
-.cistell table td:nth-child(5) {
+.cistell .taula-productes td:nth-child(3),
+.cistell .taula-productes td:nth-child(5) {
   font-weight: bold;
 }
-.cistell table td:nth-child(4) {
+.cistell .taula-productes td:nth-child(4) {
   min-width: 81px;
 }
-.cistell table td:nth-child(4) input {
+.cistell .taula-productes td:nth-child(4) input {
   border-width: 0;
   background-color: #F1F1F1;
   box-sizing: border-box;
@@ -29,13 +32,13 @@
   width: 40px;
   float: left;
 }
-.cistell table td:nth-child(4) div {
+.cistell .taula-productes td:nth-child(4) div {
   float: left;
   display: inline-block;
   border-left: 1px solid #cccccc;
   background-color: #F1F1F1;
 }
-.cistell table td:nth-child(4) div a {
+.cistell .taula-productes td:nth-child(4) div a {
   display: block;
   height: 20px;
   width: 30px;
@@ -44,6 +47,19 @@
   line-height: 20px;
   font-weight: bold;
   cursor: pointer;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  -khtml-user-select: none;
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                          not supported by any browser */
 }
 .cistell .botons-cistell {
   margin-top: 20px;
@@ -55,10 +71,58 @@
 .cistell .botons-cistell button {
   font-size: 0.75em;
 }
+.cistell #discount {
+  background-color: #F1F1F1;
+  padding: 30px;
+}
+.cistell #discount input[type="text"] {
+  border-radius: 0;
+  border-width: 0;
+  height: 40px;
+  width: 60%;
+}
+.cistell #discount .boto-taronja {
+  height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.cistell #cart-total div {
+  color: white;
+  background-color: #FE5722;
+  text-align: center;
+  padding: 20px;
+}
+.cistell #cart-total div p {
+  margin: 0;
+}
+.cistell #cart-total table {
+  width: 100%;
+  margin-top: 20px;
+  font-weight: bold;
+}
+.cistell #cart-total table td + td {
+  text-align: right;
+}
+.cistell #cart-total table td {
+  padding-bottom: 15px;
+  padding-top: 5px;
+}
+.cistell #cart-total table tr:last-child {
+  border-top: 1px solid #cccccc;
+}
+.cistell #cart-total button {
+  width: 100%;
+  border-radius: 0;
+  margin-top: 15px;
+  padding: 15px;
+}
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .cistell .botons-cistell button {
     font-size: 1em;
+  }
+  .cistell #discount input[type="text"] {
+    width: 77%;
   }
 }
 /*# sourceMappingURL=cistell.css.map */

@@ -54,8 +54,7 @@
 .quadrats .quart {
   position: relative;
 }
-.quadrats .segon,
-.quadrats .tercer,
+.quadrats .evitar-calc,
 .quadrats .quart {
   background-color: #F1F1F1;
 }
@@ -83,7 +82,7 @@
   margin: 10px;
 }
 .quadrats .segon {
-  margin-right: 10px;
+  padding-right: 5px;
   margin-bottom: 10px;
 }
 .quadrats .segon .hover {
@@ -102,6 +101,9 @@
   transform: translateY(-50%);
   color: white;
   margin: 10px;
+}
+.quadrats .tercer {
+  padding-left: 5px;
 }
 .quadrats .tercer .new {
   position: absolute;
@@ -139,9 +141,14 @@
 .quadrats .tercer {
   position: relative;
   float: left;
-  width: calc(50% - 5px);
-  padding: 10px;
+  width: 50%;
+}
+.quadrats .segon .evitar-calc,
+.quadrats .tercer .evitar-calc {
   height: 500px;
+  position: relative;
+  padding: 10px;
+  overflow: auto;
 }
 .quadrats .segon img,
 .quadrats .tercer img {
@@ -288,6 +295,55 @@
 .arrivals .standard-taronja .estrelles {
   color: white;
 }
+.ceo .container {
+  position: relative;
+  height: 200px;
+  margin-top: 50px;
+  color: white;
+  /*.container {
+            position: relative;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }*/
+}
+.ceo .centrar {
+  text-align: center;
+}
+.ceo .persona {
+  overflow: auto;
+  display: inline-block;
+}
+.ceo .persona foto,
+.ceo .persona nom-persona {
+  display: inline-block;
+}
+.ceo .persona .foto {
+  float: left;
+  overflow: auto;
+}
+.ceo .persona .nom-persona {
+  float: left;
+}
+.ceo .persona img {
+  height: 70px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+.ceo .persona h3 {
+  margin-top: 0px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.ceo .right {
+  color: #FE5722;
+}
+.ceo li.active {
+  border-color: #FE5722;
+  background-color: #FE5722;
+}
 .blog {
   margin-bottom: 30px;
 }
@@ -301,25 +357,32 @@
 .comentari .imatge img {
   display: inline-block;
 }
+.comentari a {
+  margin-left: 20px;
+}
+.comentari a:hover {
+  color: #FE5722;
+}
 .comentari i:nth-child(2) {
   margin-left: 15px;
 }
 .comentari .more {
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: 10px;
   margin-right: 20px;
 }
 .comentari:hover {
   -webkit-box-shadow: 0px 6px 25px -1px #737373;
   -moz-box-shadow: 0px 6px 25px -1px #737373;
   box-shadow: 0px 6px 25px -1px #737373;
-}
-.comentari:hover i {
-  color: #FE5722;
-}
-.comentari:hover .more {
-  color: #FE5722;
+  /*i {
+            color: @taronja;
+        }
+        
+        .more {
+            color: @taronja;
+        }*/
 }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
@@ -355,12 +418,14 @@
     height: 343px;
   }
   .quadrats .primer,
-  .quadrats .segon,
-  .quadrats .tercer {
-    height: 265px;
+  .quadrats .evitar-calc {
+    height: 265px !important;
   }
   .quadrats .col-md-8 {
     padding: 0;
+  }
+  .ceo .centrar {
+    text-align: left;
   }
 }
 /* Large devices (large desktops, 1200px and up) */

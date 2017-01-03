@@ -21,7 +21,9 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script src="js/parallax.js"></script>
+        
+        <script src="js/parallax.js"></script>  
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     </head>
 
 
@@ -59,6 +61,14 @@
                         </div>
                         <h4>BY PRICE</h4>
                         <hr>
+                        <div id="price">
+                            <p>
+                                <label for="amount">Price range:</label>
+                                <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                            </p>
+
+                            <div id="slider-range"></div>
+                        </div>
 
                         <h4>BY COLOR</h4>
                         <hr>
@@ -121,14 +131,14 @@
 
                         <div id="best-seller">
                             <a href="#"><div>
-                                <img src="imatges/slider2/3.jpg"  class="img-responsive">
-                                <p>His duobus, sicariorum.</p>
-                                <p>$79.99</p>
+                                    <img src="imatges/slider2/3.jpg"  class="img-responsive">
+                                    <p>His duobus, sicariorum.</p>
+                                    <p>$79.99</p>
                                 </div></a>
                             <a href="#"><div>
-                                <img src="imatges/slider2/4.jpg" class="img-responsive">
-                                <p>His duobus, sicariorum.</p>
-                                <p>$79.99</p>
+                                    <img src="imatges/slider2/4.jpg" class="img-responsive">
+                                    <p>His duobus, sicariorum.</p>
+                                    <p>$79.99</p>
                                 </div></a>
 
                         </div>
@@ -193,7 +203,7 @@
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-4">
                                 <div class="col-item">
-                                    <div class="photo"> <img src="imatges/slider2/2.jpg" class="img-responsive" alt="a" />
+                                    <div class="photo"> <img src="imatges/slider2/9.jpg" class="img-responsive" alt="a" />
                                         <div class="hover-item"> 
                                             <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-shopping-basket" aria-hidden="true">
                                                     <div class="hover-carrito">
@@ -452,6 +462,22 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                $("#slider-range").slider({
+                    range: true,
+                    min: 0,
+                    max: 1000,
+                    values: [75, 300],
+                    slide: function (event, ui) {
+                        $("#amount").val("$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ]);
+                    }
+                });
+                $("#amount").val("$" + $("#slider-range").slider("values", 0) +
+                        " - $" + $("#slider-range").slider("values", 1));
+            });
+        </script>
     </body>
 
 </html>

@@ -39,7 +39,7 @@
             <div class="container cistell">
                 <div class="row">
                     <div class="col-xs-12">
-                        <table>
+                        <table class="taula-productes">
                             <tr>
                                 <th class="hidden-xs">PRODUCTS</th>
                                 <th>NAME OF PRODUCT</th>
@@ -50,6 +50,24 @@
                             </tr>
                             <tr>
                                 <td class="hidden-xs"><img class="img-responsive" src="imatges/slider2/1.jpg"></td>
+                                <td>Very Me Smoothie Foundation</td>
+                                <td>$128.00</td>
+                                <td>
+                                    <input type="text" name="quant[1]" class="input-number"  value="1" min="1" max="100" readonly="">
+                                    <div>
+                                        <a class="btn-number" data-type="plus" data-field="quant[1]">
+                                            +
+                                        </a>
+                                        <a class="btn-number"  data-type="minus" data-field="quant[1]">
+                                            -
+                                        </a>
+                                    </div>
+                                </td>
+                                <td class="hidden-sm hidden-xs">$128.00</td>
+                                <td><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class="hidden-xs"><img class="img-responsive" src="imatges/slider2/9.jpg"></td>
                                 <td>Very Me Smoothie Foundation</td>
                                 <td>$128.00</td>
                                 <td>
@@ -64,7 +82,43 @@
                                     </div>
                                 </td>
                                 <td class="hidden-sm hidden-xs">$128.00</td>
-                                <td><i class="fa fa-shopping-basket" aria-hidden="true"></i></td>
+                                <td><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class="hidden-xs"><img class="img-responsive" src="imatges/slider2/5.jpg"></td>
+                                <td>Very Me Smoothie Foundation</td>
+                                <td>$128.00</td>
+                                <td>
+                                    <input type="text" name="quant[3]" class="input-number"  value="1" min="1" max="100" readonly="">
+                                    <div>
+                                        <a class="btn-number" data-type="plus" data-field="quant[3]">
+                                            +
+                                        </a>
+                                        <a class="btn-number"  data-type="minus" data-field="quant[3]">
+                                            -
+                                        </a>
+                                    </div>
+                                </td>
+                                <td class="hidden-sm hidden-xs">$128.00</td>
+                                <td><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class="hidden-xs"><img class="img-responsive" src="imatges/botes.png"></td>
+                                <td>Very Me Smoothie Foundation</td>
+                                <td>$128.00</td>
+                                <td>
+                                    <input type="text" name="quant[4]" class="input-number"  value="1" min="1" max="100" readonly="">
+                                    <div>
+                                        <a class="btn-number" data-type="plus" data-field="quant[4]">
+                                            +
+                                        </a>
+                                        <a class="btn-number"  data-type="minus" data-field="quant[4]">
+                                            -
+                                        </a>
+                                    </div>
+                                </td>
+                                <td class="hidden-sm hidden-xs">$128.00</td>
+                                <td><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a></td>
                             </tr>
                         </table>
                     </div>
@@ -88,11 +142,34 @@
 
                     <div class="col-xs-12 col-md-6">
                         <div id="discount">
-
+                            <form>
+                                <label for="code">ENTER YOUR DISCOUNT CODE</label><br>
+                                <input type="text" name="code">
+                                <input type="submit" class="boto-taronja" value="ENTER">
+                            </form>
                         </div>
                     </div>
                     <div class="col-xs-12 col-md-6">
                         <div id="cart-total">
+                            <div>
+                                <p>CART TOTAL</p>
+                            </div>
+                            <table>
+                                <tr>
+                                    <td>SUB TOTAL</td><td>$909.00</td>
+                                </tr>
+                                <tr>
+                                    <td>TAX</td><td>$909.00</td>
+                                </tr>
+                                <tr>
+                                    <td>SHIPPING</td><td>$9.00</td>
+                                </tr>
+                                <tr>
+                                    <td>ORDER TOTAL</td><td>$918.00</td>
+                                </tr>
+                            </table>
+                            <button class="btn">PAYMENT</button>
+                            <button class="btn">COUNTINUE SHOPPING</button>                           
 
                         </div>
                     </div>

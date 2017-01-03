@@ -14,35 +14,35 @@
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
         text-align: right;
-        
+
         color: white;
         text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-        
+
         h2 {
             font-size: 3em;
             font-weight: bolder;
         }
-        
+
         .read-more {
             background-color: transparent;
             border-color: white;
             &:hover {
-                
+
             }
         }
     }
-    
+
     .item.left {
         //perque no es vegi la imatge quan canvia d'item
         .next-img {
             display: none;
         }
     }
-    
+
     .left, .right {
         background-image: none;
     }
-    
+
     .next-img {
         opacity: 1;
         img {
@@ -51,7 +51,7 @@
             margin-top: -33px;
         }
     }
-    
+
     .carousel-control {
         .fa {    
             position: relative;
@@ -64,14 +64,14 @@
 
         }
     }
-    
-    
+
+
 }
 
 .quadrats {
     margin-top: @marge;
-    
-    
+
+
     .hover {
         display: none;
         text-align: center;
@@ -79,17 +79,17 @@
     .primer, .segon, .tercer, .quart {
         position: relative;
     }
-    
-    .segon, .tercer, .quart {
+
+    .evitar-calc, .quart {
         background-color: @gris;
     }
-    
+
     .primer, .segon {
         &:hover .hover {
             display: block;
         }
     }
-    
+
     .primer {
         margin-bottom: 10px;
         img {
@@ -109,9 +109,9 @@
             }
         }
     }
-    
+
     .segon {
-        margin-right: 10px;
+        padding-right: 5px;
         margin-bottom: 10px;
         .hover {
             position: absolute;
@@ -131,72 +131,80 @@
             }
         }
     }
-    
-    .tercer .new {
-        position: absolute;
-        top: 0;
-        left: 10px;
-        width: 70px;
-        color: white;
-        background-color: @taronja;
-        text-align: center;
-        h2 {
-            margin: 5px;
-            font-size: 1.4em;
-        }
-        
-        .triangle-esquerra, .triangle-dreta {
+
+    .tercer {
+        padding-left: 5px;
+        .new {
             position: absolute;
-            width: 0;
-            height: 0;
-            border-style: solid;
-        }
-        
-        .triangle-esquerra {
-            top: 100%;
-            left: 0;
-            border-width: 20px 35px 0 0;
-            border-color: @taronja transparent transparent transparent;
-            
-        }
-        
-        .triangle-dreta {
-            top: 100%;
-            right: 0;
-            border-width: 0 35px 20px 0;
-            border-color: transparent @taronja transparent transparent;
-            
+            top: 0;
+            left: 10px;
+            width: 70px;
+            color: white;
+            background-color: @taronja;
+            text-align: center;
+            h2 {
+                margin: 5px;
+                font-size: 1.4em;
+            }
+
+            .triangle-esquerra, .triangle-dreta {
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-style: solid;
+            }
+
+            .triangle-esquerra {
+                top: 100%;
+                left: 0;
+                border-width: 20px 35px 0 0;
+                border-color: @taronja transparent transparent transparent;
+
+            }
+
+            .triangle-dreta {
+                top: 100%;
+                right: 0;
+                border-width: 0 35px 20px 0;
+                border-color: transparent @taronja transparent transparent;
+
+            }
         }
     }
-    
-    
-    
+
+
+
     .segon , .tercer {
         position: relative;
         float: left;
-        width: ~"calc(50% - 5px)";
-        padding: 10px;
-        height: 500px;
-        
+        width: 50%;
+
+        .evitar-calc {
+            height: 500px;
+            position: relative;
+            padding: 10px;
+            overflow: auto;
+        }
+
         img {
             position: relative;
             top: 50%;
             -webkit-transform: translateY(-50%);
             -ms-transform: translateY(-50%);
             transform: translateY(-50%);
-            
+
         }
-        
+
     }
-    
-    
-    
+
+
+
     .quart {
         overflow: auto;
         img {
             float: right;
         }
-        
+
         .women {
             position: absolute;
             width: 40%;
@@ -205,21 +213,21 @@
             -ms-transform: translateY(-50%);
             transform: translateY(-50%);
             padding: 20px;
-            
+
             p {
                 margin-top: 20px;
                 margin-bottom: 20px;
             }
-            
+
             h2 {
                 font-size: 1.7em;
                 font-weight: bold;
             }
         }
     }
-        
-    
-    
+
+
+
 }
 
 .titol {
@@ -254,11 +262,11 @@
     color: black;
     text-decoration: none !important;
     margin-bottom: 10px;
-    
+
     + a {
         color: @taronja;
     }
-    
+
 }
 
 
@@ -276,7 +284,7 @@
 .carrousel-petit {
     background-color: @gris;
     position: relative;
-    
+
     .carousel-indicators {
         li {
             border-color: black;
@@ -286,7 +294,7 @@
             border-color: @taronja;
         }
     }
-    
+
     .item {
         margin: 90px 0 90px 0;
     }
@@ -295,15 +303,15 @@
         font-weight: 900;
         font-size: 2em;
     }
-    
-    
+
+
     .text-carousel {
         position: relative;
         float: left;
         width: 80%;
         z-index: 999;
     }
-    
+
     .imatge-carousel {
         position: absolute;
         right: 0;
@@ -321,7 +329,7 @@
             top: 50%;
         }
     }
-    
+
     .boto-carousel {
         position: absolute;
         right: 0;
@@ -331,7 +339,7 @@
         button {
             margin-top: -10px;
         }
-        
+
     }
 }
 
@@ -368,6 +376,75 @@
 }
 
 
+.ceo {
+
+    .container {
+        position: relative;
+        height: 200px;
+        margin-top: 50px;
+        color: white;
+
+        /*.container {
+            position: relative;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }*/
+    }
+
+    .centrar {
+        text-align: center;
+    }
+
+    .persona {
+
+        overflow: auto;
+        display: inline-block;
+
+        foto, nom-persona {
+            display: inline-block;
+        }
+
+        .foto {
+            float: left;
+            overflow: auto;
+        }
+
+        .nom-persona {
+            float: left;
+        }
+
+        img {
+            height: 70px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        h3 {
+            margin-top: 0px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+
+
+
+
+    }
+
+    .right {
+        color: @taronja;
+    }
+    
+    li.active {
+        border-color: @taronja;
+        background-color: @taronja;
+    }
+}
+
+
 .blog {
     margin-bottom: 30px;
 }
@@ -383,29 +460,41 @@
             display: inline-block;
         }
     }
+
+    a {
+        margin-left: 20px;
+        &:hover {
+            color: @taronja;
+        }
+    }
+
     i:nth-child(2) {
         margin-left: 15px;
     }
     .more {
         position: absolute;
         right: 0;
-        bottom: 0;
+        bottom: 10px;
         margin-right: 20px;
     }
-    
+
     &:hover {
         -webkit-box-shadow: 0px 6px 25px -1px rgba(115,115,115,1);
         -moz-box-shadow: 0px 6px 25px -1px rgba(115,115,115,1);
         box-shadow: 0px 6px 25px -1px rgba(115,115,115,1);
-        
-        i {
+
+        /*i {
             color: @taronja;
         }
         
         .more {
             color: @taronja;
-        }
+        }*/
     }
+
+    
+
+    
 }
 
 
@@ -414,18 +503,18 @@
 /* Small devices (tablets, 768px and up) */
 
 @media (min-width: 768px) {
-    
-    
-    
+
+
+
     .carrousel-petit {
         .text-carousel {
             width: 65%;
         }
-        
+
         .imatge-carousel {
             width: 35%;
         }
-        
+
         .boto-carousel {
             float: left;
             clear: left;
@@ -436,17 +525,17 @@
                 margin-top: 0;
             }
         }
-        
+
         h2 {
             font-size: 2.5em;
         }
     }
-    
-    
+
+
     .comentari {
         max-width: none;
     }
-    
+
     .arrivals {
         .standard {
             height: 258px;
@@ -461,15 +550,23 @@
             height: 343px;
         }
     }
-    
+
     .quadrats {
-        .primer, .segon, .tercer {
-            height: 265px;
+        .primer, .evitar-calc {
+            height: 265px !important;
         }
         .col-md-8 {
             padding: 0;
         }
     }
+
+    .ceo {
+        .centrar {
+            text-align: left;
+        }
+
+    }
+
 }
 
 /* Large devices (large desktops, 1200px and up) */

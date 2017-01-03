@@ -162,7 +162,7 @@ a:hover {
   width: 100%;
   background-color: rgba(254, 87, 34, 0.6);
   padding: 10px 20px 10px 20px;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 #header .megamenu .imatge-megamenu div div p {
   color: white;
@@ -184,10 +184,72 @@ a:hover {
   border-top: solid 3px #FE5722;
   background-color: white;
   z-index: 10;
-  width: 150px;
+  width: 200px;
 }
-#header #carrito .item-carrito img {
-  width: 50px;
+#header #carrito .item-carrito {
+  overflow: auto;
+  height: 85px;
+  margin-top: 7px;
+}
+#header #carrito .item-carrito .imatge-carrito {
+  float: left;
+  width: 25%;
+  padding-top: 13px;
+}
+#header #carrito .item-carrito .imatge-carrito img {
+  display: block;
+  max-width: 90%;
+  border: 1px solid #F1F1F1;
+  margin: 0 auto;
+}
+#header #carrito .item-carrito .nom-carrito {
+  float: left;
+  width: 55%;
+}
+#header #carrito .item-carrito .nom-carrito h4 {
+  font-size: 1em;
+  font-weight: bold;
+}
+#header #carrito .item-carrito .nom-carrito p {
+  font-size: 0.9em;
+}
+#header #carrito .item-carrito .boto-carrito {
+  float: left;
+  width: 20%;
+  padding-top: 26px;
+  text-align: center;
+}
+#header #carrito .item-carrito .boto-carrito button {
+  border-radius: 0;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  line-height: 25px;
+}
+#header #carrito hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#header #carrito .preu-carrito {
+  padding: 10px;
+}
+#header #carrito .preu-carrito button {
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 0.9em;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+#header #carrito .preu-carrito div {
+  position: relative;
+}
+#header #carrito .preu-carrito div p {
+  font-size: 0.9em;
+}
+#header #carrito .preu-carrito div p + p {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 .btn:hover {
   color: inherit;
@@ -234,6 +296,7 @@ a:hover {
 }
 .col-item .photo {
   position: relative;
+  border: 1px solid #cccccc;
 }
 .col-item .preu {
   position: absolute;
