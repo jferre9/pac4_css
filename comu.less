@@ -111,6 +111,29 @@ a {
         top: 0;
         right: 0;
         //float: right;
+        
+        a {
+            position: relative;
+        }
+        
+        .num-carrito {
+            display: block;
+            position: absolute;
+            top: 15px;
+            right: 0px;
+            font-size: 0.65em;
+            background-color: @taronja;
+            color: white;
+            height: 15px;
+            width: 15px;
+            line-height: 15px;
+            text-align: center;
+            border-radius: 50%;
+            font-style: normal;
+            font-weight: bold;
+            
+            
+        }
 
     }
 
@@ -565,6 +588,15 @@ footer {
     h3 {
         margin-top: 5px;
     }
+    
+    li {
+        margin-top: 10px;
+    }
+    
+    .contacte {
+        padding-top: 20px;
+    }
+    
 }
 
 #finalDeTot {
@@ -590,7 +622,7 @@ footer {
     footer {
         .social {
             text-align: left;
-            margin-top: -30px;
+            //margin-top: -30px;
             i {
                 display: inline-block;
                 margin-right: 10px;
@@ -603,7 +635,12 @@ footer {
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
-
+    footer {
+            .social {
+                text-align: left;
+                margin-top: -42px;
+            }
+    }
 }
 
 /* Large devices (large desktops, 1200px and up) */

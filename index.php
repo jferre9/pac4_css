@@ -153,7 +153,7 @@
                                         <div class="text-carousel">
                                             <h3>2016 TREND</h3>
                                             <h2>NEW COLLECTION</h2>
-                                            <p>Hodor. Hodor hodor hodor? Hodor hodor - hodor, hodor. Hodor hodor... Hodor hodor hodor hodor! Hodor hodor - hodor - hodor</p>
+                                            <p>The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men.</p>
                                         </div>
                                         <div class="imatge-carousel"> <img class="img-responsive" src="imatges/botes.png" /> </div>
                                         <div class="boto-carousel">
@@ -168,7 +168,7 @@
                                         <div class="text-carousel">
                                             <h3>2016 TREND</h3>
                                             <h2>NEW COLLECTION</h2>
-                                            <p>Hodor. Hodor hodor hodor? Hodor hodor - hodor, hodor. Hodor hodor... Hodor hodor hodor hodor! Hodor hodor - hodor - hodor</p>
+                                            <p>The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men.</p>
                                         </div>
                                         <div class="imatge-carousel"> <img class="img-responsive" src="imatges/botes.png" /> </div>
                                         <div class="boto-carousel">
@@ -183,7 +183,7 @@
                                         <div class="text-carousel">
                                             <h3>2016 TREND</h3>
                                             <h2>NEW COLLECTION</h2>
-                                            <p>Hodor. Hodor hodor hodor? Hodor hodor - hodor, hodor. Hodor hodor... Hodor hodor hodor hodor! Hodor hodor - hodor - hodor</p>
+                                            <p>The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men.</p>
                                         </div>
                                         <div class="imatge-carousel"> <img class="img-responsive" src="imatges/botes.png" /> </div>
                                         <div class="boto-carousel">

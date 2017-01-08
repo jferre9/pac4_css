@@ -110,15 +110,15 @@
                         <div id="compare">
                             <div class="item-compare">
                                 <p>White men's polo</p>
-                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                <a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a>
                             </div>
                             <div class="item-compare">
                                 <p>T-shirt for style girl</p>
-                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                <a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a>
                             </div>
                             <div class="item-compare">
                                 <p>Basic dress for women</p>
-                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                <a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a>
                             </div>
                             <div class="botons">
                                 <a href="#">CLEAR ALL</a>

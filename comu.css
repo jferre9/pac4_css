@@ -98,6 +98,25 @@ a:hover {
   top: 0;
   right: 0;
 }
+#header .icones a {
+  position: relative;
+}
+#header .icones .num-carrito {
+  display: block;
+  position: absolute;
+  top: 15px;
+  right: 0px;
+  font-size: 0.65em;
+  background-color: #FE5722;
+  color: white;
+  height: 15px;
+  width: 15px;
+  line-height: 15px;
+  text-align: center;
+  border-radius: 50%;
+  font-style: normal;
+  font-weight: bold;
+}
 #header a {
   position: relative;
 }
@@ -450,6 +469,12 @@ footer .social i {
 footer h3 {
   margin-top: 5px;
 }
+footer li {
+  margin-top: 10px;
+}
+footer .contacte {
+  padding-top: 20px;
+}
 #finalDeTot {
   padding-top: 10px;
   margin-top: 30px;
@@ -466,7 +491,6 @@ footer h3 {
   }
   footer .social {
     text-align: left;
-    margin-top: -30px;
   }
   footer .social i {
     display: inline-block;
@@ -474,5 +498,11 @@ footer h3 {
   }
 }
 /* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  footer .social {
+    text-align: left;
+    margin-top: -42px;
+  }
+}
 /* Large devices (large desktops, 1200px and up) */
 /*# sourceMappingURL=comu.css.map */

@@ -145,7 +145,7 @@
 }
 .quadrats .segon .evitar-calc,
 .quadrats .tercer .evitar-calc {
-  height: 500px;
+  height: 480px;
   position: relative;
   padding: 10px;
   overflow: auto;
@@ -180,6 +180,9 @@
 .quadrats .quart .women h2 {
   font-size: 1.7em;
   font-weight: bold;
+}
+.fletxa {
+  overflow: auto;
 }
 .titol .linia-curta {
   display: inline-block;
@@ -236,8 +239,9 @@
 .carrousel-petit .text-carousel {
   position: relative;
   float: left;
-  width: 80%;
+  width: 70%;
   z-index: 999;
+  font-size: 0.9em;
 }
 .carrousel-petit .imatge-carousel {
   position: absolute;
@@ -295,11 +299,15 @@
 .arrivals .standard-taronja .estrelles {
   color: white;
 }
+.arrivals .photo {
+  border-width: 0;
+}
 .ceo .container {
   position: relative;
   height: 200px;
   margin-top: 50px;
   color: white;
+  margin-bottom: 20px;
   /*.container {
             position: relative;
             top: 50%;
